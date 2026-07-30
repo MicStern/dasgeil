@@ -1046,16 +1046,14 @@ ul, ol {
 
 .principle-stacked {
   grid-template-columns: 1fr;
+  justify-items: center;
   text-align: center;
-}
-
-.principle-stacked .principle-index {
-  font-size: clamp(80px, 10vw, 140px);
-  opacity: 0.12;
+  padding-top: 56px;
+  padding-bottom: 56px;
 }
 
 .principle-stacked .principle-body {
-  margin-top: -30px;
+  max-width: 52ch;
 }
 
 .principle-index {
