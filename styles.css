@@ -138,6 +138,12 @@ textarea {
   text-transform: uppercase;
 }
 
+/* Chapter markers get their own accent color so they read as one
+   consistent system regardless of a section's light/dark background. */
+.section-no {
+  color: var(--blue);
+}
+
 .display {
   position: relative;
   z-index: 1;
