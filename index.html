@@ -348,7 +348,7 @@
         <ul class="contact-meta">
           <li>Antwort normalerweise innerhalb von zwei Werktagen</li>
           <li>Berlin, Wien und remote</li>
-          <li>Alternativ direkt per Mail: <a href="mailto:hello@dasgeil.studio">hello@dasgeil.studio</a></li>
+          <li>Alternativ direkt per Mail: <a href="mailto:hello@dasgeil.de">hello@dasgeil.de</a></li>
         </ul>
       </div>
 
@@ -356,15 +356,12 @@
         <!--
           KONFIGURATION KONTAKTFORMULAR
           Dienst: Web3Forms (https://web3forms.com), kein Backend nötig.
-          1. Auf web3forms.com die Ziel-Mailadresse eintragen -> Access Key
-             wird sofort per Mail zugeschickt (kein Account/Login nötig).
-          2. Den Wert unten bei "access_key" eintragen.
-          Solange hier der Platzhalter steht, läuft das Formular bewusst im
-          Entwicklungsmodus: es validiert normal, zeigt aber keine
-          Erfolgsmeldung vor, siehe script.js -> handleContactSubmit().
+          Access Key ist an kontakt@dasgeil.de gebunden - Einsendungen aus
+          diesem Formular landen dort. Siehe script.js -> handleContactSubmit().
         -->
-        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="access_key" value="66d9bc1b-36f4-4d3e-bab9-98edd1362d7a">
         <input type="hidden" name="subject" value="Neue Projektanfrage über dasgeil.de">
+        <input type="hidden" name="from_name" value="Kontaktformular dasgeil.de">
         <input type="checkbox" name="botcheck" class="botcheck" aria-hidden="true" tabindex="-1" autocomplete="off">
 
         <div class="form-row">
@@ -422,7 +419,7 @@
     </div>
 
     <nav class="footer-links" aria-label="Footer">
-      <a href="mailto:hello@dasgeil.studio">hello@dasgeil.studio</a>
+      <a href="mailto:hello@dasgeil.de">hello@dasgeil.de</a>
       <!-- Social-Links ergänzen, sobald vorhanden - siehe README "Footer-Links pflegen" -->
       <span class="footer-link-placeholder">LinkedIn <span class="placeholder-tag">Link ergänzen</span></span>
       <span class="footer-link-placeholder">Instagram <span class="placeholder-tag">Link ergänzen</span></span>

@@ -676,7 +676,7 @@ if (contactForm && formStatus) {
     if (!isConfigured) {
       formStatus.classList.add("error");
       formStatus.textContent =
-        "Entwicklungsmodus: Das Formular ist noch nicht mit einem Maildienst verbunden. Schreib uns direkt an hello@dasgeil.studio.";
+        "Entwicklungsmodus: Das Formular ist noch nicht mit einem Maildienst verbunden. Schreib uns direkt an hello@dasgeil.de.";
       return;
     }
 
@@ -701,7 +701,7 @@ if (contactForm && formStatus) {
     } catch (error) {
       formStatus.classList.add("error");
       formStatus.textContent =
-        "Hat nicht geklappt. Schreib uns direkt an hello@dasgeil.studio.";
+        "Hat nicht geklappt. Schreib uns direkt an hello@dasgeil.de.";
     } finally {
       submitButton.disabled = false;
     }
