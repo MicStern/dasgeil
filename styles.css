@@ -1022,55 +1022,39 @@ ul, ol {
 .principles {
   display: flex;
   flex-direction: column;
+  max-width: 860px;
   margin-top: 64px;
   border-top: 1px solid var(--line);
 }
 
 .principle {
   display: grid;
-  grid-template-columns: 0.4fr 1fr;
-  gap: 32px;
-  align-items: center;
-  padding: 40px 0;
+  grid-template-columns: 90px 1fr;
+  column-gap: 28px;
+  align-items: baseline;
+  padding: 36px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .principle-reverse {
-  grid-template-columns: 1fr 0.4fr;
-}
-
-.principle-reverse .principle-index {
-  order: 2;
-  text-align: right;
-}
-
-.principle-stacked {
-  grid-template-columns: 1fr;
-  justify-items: center;
-  text-align: center;
-  padding-top: 56px;
-  padding-bottom: 56px;
-}
-
-.principle-stacked .principle-body {
-  max-width: 52ch;
+  margin-left: clamp(0px, 8vw, 100px);
 }
 
 .principle-index {
-  font-size: clamp(48px, 5vw, 72px);
+  font-size: 42px;
   font-weight: 900;
   color: var(--blue);
   line-height: 1;
 }
 
 .principle-body h3 {
-  font-size: clamp(20px, 2vw, 26px);
-  margin-bottom: 10px;
+  font-size: clamp(19px, 1.8vw, 23px);
+  margin-bottom: 8px;
 }
 
 .principle-body p {
-  max-width: 48ch;
-  font-size: 16px;
+  max-width: 44ch;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--grey);
 }
