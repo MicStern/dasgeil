@@ -1718,6 +1718,11 @@ ul, ol {
   border-bottom: 1px solid #2a2a2a;
 }
 
+.footer-logo .logo-wordmark {
+  height: clamp(17px, 1.6vw, 21px);
+  filter: brightness(0) invert(1);
+}
+
 .footer-tagline {
   font-size: 14px;
   color: #9a968b;
