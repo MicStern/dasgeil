@@ -47,6 +47,21 @@ body {
   font-weight: 300;
 }
 
+.top-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Offset anchor-scroll targets by the sticky header height so sections
+   land fully below it instead of partly hidden behind it. */
+#haltung,
+#kompetenzen,
+#prozess,
+#kontakt {
+  scroll-margin-top: 90px;
+}
+
 a {
   color: inherit;
   text-decoration: none;
