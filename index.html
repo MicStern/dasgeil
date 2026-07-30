@@ -3,267 +3,448 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="dasgeil — Webdesign für alle, die auffallen wollen. Psychologie, UX-Research und Grafikdesign aus einem Team, nicht von drei Freelancern.">
-  <title>dasgeil — Webdesign, das hängen bleibt.</title>
+  <meta name="description" content="dasgeil ist ein Webdesign-Studio aus Berlin und Wien. Wir verbinden Strategie, UX-Research, Grafikdesign und Entwicklung zu digitalen Auftritten, die auffallen und funktionieren.">
+  <meta name="theme-color" content="#090909">
+  <title>dasgeil — Webdesign, UX und visuelle Identitäten aus Berlin und Wien</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="dasgeil">
+  <meta property="og:title" content="dasgeil — Webdesign, UX und visuelle Identitäten">
+  <meta property="og:description" content="Wir verbinden Strategie, UX-Research, Grafikdesign und Entwicklung zu digitalen Auftritten, die auffallen und funktionieren. Berlin × Wien.">
+  <meta property="og:locale" content="de_DE">
+  <!-- Social-Preview-Bild ergänzen: assets/images/og-cover.jpg (1200x630), dann hier verlinken -->
+  <!-- <meta property="og:image" content="https://dasgeil.de/assets/images/og-cover.jpg"> -->
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <a id="top" class="top-anchor" aria-hidden="true" tabindex="-1"></a>
   <div class="cursor" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <header class="site-header" id="siteHeader" data-state="top">
     <a class="logo" href="#top" aria-label="dasgeil Startseite">dasgeil</a>
 
     <nav class="nav" aria-label="Hauptnavigation">
-      <a href="#haltung">Haltung</a>
-      <a href="#kompetenzen">Kompetenzen</a>
-      <a href="#prozess">Prozess</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#arbeiten" data-nav="arbeiten">Arbeiten</a>
+      <a href="#leistungen" data-nav="leistungen">Leistungen</a>
+      <a href="#ansatz" data-nav="ansatz">Ansatz</a>
+      <a href="#team" data-nav="team">Team</a>
+      <a href="#was-waere-wenn" data-nav="was-waere-wenn">Was wäre wenn</a>
     </nav>
 
     <div class="header-actions">
-      <div class="theme-switcher" role="group" aria-label="Design wechseln">
-        <button type="button" class="theme-btn active" data-theme="1" aria-label="Design 1">01</button>
-        <button type="button" class="theme-btn" data-theme="2" aria-label="Design 2">02</button>
-        <button type="button" class="theme-btn" data-theme="3" aria-label="Design 3">03</button>
-        <button type="button" class="theme-btn" data-theme="4" aria-label="Design 4">04</button>
-      </div>
-
-      <a class="header-cta" href="#kontakt">Projekt starten ↗</a>
+      <a class="header-cta" href="#kontakt">Projekt starten</a>
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="visually-hidden">Menü öffnen</span>
+      </button>
     </div>
   </header>
 
-  <div id="themeOverlay" class="theme-overlay" aria-hidden="true">
-    <p>Wir bauen für dich<br>mal eben um<span class="theme-overlay-dots">…</span></p>
-    <div class="theme-overlay-bar">
-      <div id="themeOverlayBarFill" class="theme-overlay-bar-fill"></div>
-    </div>
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile Navigation">
+      <a href="#arbeiten">Arbeiten</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ansatz">Ansatz</a>
+      <a href="#team">Team</a>
+      <a href="#was-waere-wenn">Was wäre wenn</a>
+    </nav>
+    <a class="btn btn-primary mobile-menu-cta" href="#kontakt">Projekt starten</a>
   </div>
 
-  <main>
+  <main id="main">
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Berlin × Wien · Webdesign für alle, die auffallen wollen</p>
+        <p class="eyebrow">Webdesign, UX und visuelle Identitäten aus Berlin und Wien.</p>
 
-        <h1 class="display display-solid">
+        <h1 class="hero-headline">
           GUTE WEBSITES<br>
           SIND KEINE KUNST.
         </h1>
 
-        <p class="hero-sub">
-          Sondern
-          <span class="brush-mark brush-1">Handwerk</span>
-          mit Köpfchen.
+        <p class="hero-subheadline">
+          SONDERN <span class="brush-mark brush-1">HANDWERK</span><br>
+          MIT KÖPFCHEN.
         </p>
 
-        <p class="intro">
-          Psychologie, UX-Research und Grafikdesign: Einzeln macht das jeder Zweite,
-          zusammen in einem Team kaum wer. Ob Startup oder eingesessener Betrieb,
-          für alle, die nicht mehr aussehen wollen wie von gestern.
+        <p class="hero-intro">
+          Wir verbinden Strategie, UX-Research, Grafikdesign und Entwicklung zu
+          digitalen Auftritten, die auffallen und funktionieren.
         </p>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="#kontakt">Lass uns reden</a>
-          <a class="btn btn-ghost" href="#haltung">Zeig mal</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Projekt besprechen</a>
+          <a class="btn btn-ghost" href="#arbeiten">Arbeiten ansehen</a>
         </div>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-block art-block-photo">
-          <span>KLARHEIT</span>
+      <div class="hero-study" id="heroStudy" aria-hidden="true">
+        <div class="hero-study-stage">
+          <div class="study-frame study-frame-desktop">
+            <div class="study-frame-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="study-frame-body">
+              <div class="study-block study-block-nav"></div>
+              <div class="study-block study-block-hero"></div>
+              <div class="study-block-row">
+                <div class="study-block study-block-card"></div>
+                <div class="study-block study-block-card"></div>
+                <div class="study-block study-block-card"></div>
+              </div>
+            </div>
+
+            <div class="study-frame study-frame-mobile">
+              <div class="study-frame-body">
+                <div class="study-block study-block-nav"></div>
+                <div class="study-block study-block-hero"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="study-chip study-chip-type" aria-hidden="true">Aa</div>
+          <div class="study-chip study-chip-color" aria-hidden="true">
+            <span class="swatch swatch-black"></span>
+            <span class="swatch swatch-blue"></span>
+            <span class="swatch swatch-paper"></span>
+          </div>
         </div>
 
-        <div class="art-block art-block-blue">
-          <span>+ WIRKUNG</span>
-        </div>
+        <p class="hero-study-label">Interne Designstudie — So entsteht ein digitaler Auftritt</p>
 
-        <div class="art-caption">
-          <span>01</span>
-          <p>Wir machen keine Dekoration. Wir machen Auftritte.</p>
-        </div>
+        <ul class="hero-study-tags">
+          <li>Strategie</li>
+          <li>Struktur</li>
+          <li>UX</li>
+          <li>Design</li>
+          <li>Umsetzung</li>
+        </ul>
       </div>
     </section>
 
-    <section id="haltung" class="statement reveal">
-      <p class="section-no">02 / HALTUNG</p>
+    <!-- ================================================================
+         KOMPETENZ- UND VERTRAUENSLEISTE
+         ================================================================ -->
+    <section class="trust-bar" aria-label="Kompetenzen und Arbeitsweise">
+      <p class="trust-bar-track">
+        <span>Strategie</span>
+        <span class="trust-bar-dot" aria-hidden="true">·</span>
+        <span>UX-Research</span>
+        <span class="trust-bar-dot" aria-hidden="true">·</span>
+        <span>Webdesign</span>
+        <span class="trust-bar-dot" aria-hidden="true">·</span>
+        <span>Entwicklung</span>
+        <span class="trust-bar-dot" aria-hidden="true">·</span>
+        <span>Grafikdesign</span>
+      </p>
+      <ul class="trust-bar-meta">
+        <li>Berlin × Wien</li>
+        <li>Drei spezialisierte Köpfe</li>
+        <li>Direkte Zusammenarbeit — keine anonymen Subunternehmer</li>
+      </ul>
+    </section>
 
-      <h2 class="display display-solid">
-        DEINE WEBSITE MUSS<br>
-        NICHT ALLEN GEFALLEN.
+    <!-- ================================================================
+         AUSGEWÄHLTE ARBEITEN
+         ================================================================ -->
+    <section id="arbeiten" class="projects reveal">
+      <div class="projects-heading">
+        <p class="section-label">Ausgewählte Arbeiten</p>
+        <h2 class="section-headline">So denken, strukturieren und inszenieren wir Projekte.</h2>
+        <p class="projects-intro">
+          Unser Portfolio wächst gerade. Wie wir Projekte denken, strukturieren
+          und inszenieren, können wir trotzdem schon zeigen.
+        </p>
+      </div>
+
+      <div id="projectsList" class="projects-list">
+        <!-- wird aus content.js (projects) gerendert, siehe script.js -->
+      </div>
+    </section>
+
+    <!-- ================================================================
+         POSITIONIERUNG UND HALTUNG
+         ================================================================ -->
+    <section id="ansatz" class="positioning reveal">
+      <p class="section-label">Ansatz</p>
+
+      <h2 class="positioning-headline">
+        WIR MACHEN KEINE DEKORATION.<br>
+        WIR BAUEN AUFTRITTE.
       </h2>
 
-      <h2 class="display display-outline">
-        NUR DEN
-        <span class="brush-mark brush-2">RICHTIGEN.</span>
-      </h2>
+      <p class="positioning-intro">
+        Viele Websites sehen ordentlich aus und sagen trotzdem nichts. Wir
+        verbinden Gestaltung mit Nutzerverständnis, damit digitale Auftritte
+        nicht nur modern wirken, sondern Orientierung schaffen und Vertrauen
+        aufbauen.
+      </p>
 
-      <div class="statement-bottom">
-        <p>
-          Wir bauen keine hübschen digitalen Broschüren von der Stange.
-          Wir bauen Auftritte mit Haltung, egal ob Startup oder Traditionsbetrieb,
-          der einfach mal wieder zeitgemäß aussehen darf.
-        </p>
+      <div class="principles">
+        <article class="principle">
+          <span class="principle-index">01</span>
+          <div class="principle-body">
+            <h3>Klar vor kompliziert</h3>
+            <p>Wir reduzieren Inhalte und Nutzerwege auf das, was tatsächlich relevant ist.</p>
+          </div>
+        </article>
 
-        <span class="sticker">EHRLICH.<br>DIREKT.<br>DASGEIL.</span>
+        <article class="principle principle-reverse">
+          <span class="principle-index">02</span>
+          <div class="principle-body">
+            <h3>Eigenständig statt trendabhängig</h3>
+            <p>Wir gestalten keine kurzfristigen Effekte, sondern eine visuelle Sprache, die zur Marke passt.</p>
+          </div>
+        </article>
+
+        <article class="principle principle-stacked">
+          <span class="principle-index">03</span>
+          <div class="principle-body">
+            <h3>Nutzerbasiert statt aus dem Bauch</h3>
+            <p>Entscheidungen entstehen aus Anforderungen, Verhalten und echten Nutzungssituationen.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <p class="services-kicker">Die meisten können eins davon. Wir können alle drei. Gleichzeitig.</p>
+    <!-- ================================================================
+         LEISTUNGEN (interaktiv)
+         ================================================================ -->
+    <section id="leistungen" class="services-section reveal">
+      <p class="section-label">Leistungen</p>
+      <h2 class="section-headline">Websites und digitale Auftritte — und alles, was dahintersteckt.</h2>
 
-    <section id="kompetenzen" class="services">
-      <article class="service-card reveal">
-        <span class="service-no">01</span>
-        <h3>WEBDESIGN</h3>
-        <p>Struktur, Gestaltung und Umsetzung. Schnell, klar und ohne Agenturtheater.</p>
-        <button class="card-toggle" type="button">Was bringt das? +</button>
-        <div class="card-extra">Mehr Vertrauen. Mehr Anfragen. Weniger Erklärungsbedarf.</div>
-      </article>
+      <div class="services-panel">
+        <div id="servicesList" class="services-list" role="tablist" aria-label="Leistungsbereiche">
+          <!-- wird aus content.js (services) gerendert -->
+        </div>
 
-      <article class="service-card dark reveal">
-        <span class="service-no">02</span>
-        <h3>UX/UI</h3>
-        <p>Wir analysieren echte Nutzung statt Bauchgefühl hübsch zu verpacken.</p>
-        <button class="card-toggle" type="button">Was bringt das? +</button>
-        <div class="card-extra">Weniger Reibung. Klare Wege. Nutzer, die nicht abspringen.</div>
-      </article>
-
-      <article class="service-card blue reveal">
-        <span class="service-no">03</span>
-        <h3>GRAFIKDESIGN</h3>
-        <p>Visuelle Identitäten, die nicht aussehen wie die nächste Canva-Vorlage.</p>
-        <button class="card-toggle" type="button">Was bringt das? +</button>
-        <div class="card-extra">Wiedererkennung, Haltung und ein Auftritt, der zusammenpasst.</div>
-      </article>
+        <div id="servicesPreview" class="services-preview" aria-live="polite">
+          <!-- wird aus content.js (services) gerendert -->
+        </div>
+      </div>
     </section>
 
+    <!-- ================================================================
+         TEAM UND BESONDERHEIT
+         ================================================================ -->
+    <section id="team" class="team-section reveal">
+      <p class="section-label">Team</p>
+
+      <h2 class="team-headline">
+        DIE MEISTEN GESTALTEN ZUERST.<br>
+        WIR VERSTEHEN ZUERST.
+      </h2>
+
+      <p class="team-intro">
+        Bei dasgeil entstehen Strategie, Nutzerverständnis, Gestaltung und
+        Umsetzung nicht in getrennten Abteilungen. Die Disziplinen arbeiten
+        von Anfang an zusammen.
+      </p>
+
+      <div id="teamList" class="team-list">
+        <!-- wird aus content.js (team) gerendert -->
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PROZESS
+         ================================================================ -->
     <section id="prozess" class="process reveal">
-      <div class="process-heading">
-        <p class="section-no">03 / PROZESS</p>
-        <h2 class="display display-solid">
-          VIER SCHRITTE.<br>
-          <span class="brush-mark brush-3">KEIN ZIRKUS.</span>
-        </h2>
+      <p class="section-label">Prozess</p>
+      <h2 class="section-headline">Vier Schritte. Ein durchgängiger Prozess.</h2>
 
-        <p class="process-proof">
-          Kein Prozess von der Stange. Jeder Schritt basiert auf echter
-          Verhaltenspsychologie und Nutzerforschung. Das Ergebnis: Auftritte,
-          die nicht nur gut aussehen, sondern auch funktionieren.
-        </p>
-      </div>
-
-      <ol>
-        <li>
-          <b>01</b>
-          <div>
-            <h3>Hinschauen</h3>
-            <p>Bevor wir irgendwas gestalten, verstehen wir, wie deine Zielgruppe
-              wirklich tickt: psychologisch, nicht nach Bauchgefühl.</p>
+      <ol class="process-list">
+        <li class="process-step">
+          <span class="process-number">01</span>
+          <div class="process-body">
+            <h3>Verstehen</h3>
+            <p>Ziele, Zielgruppen, bestehende Probleme und Rahmenbedingungen werden gemeinsam geklärt.</p>
           </div>
         </li>
-        <li>
-          <b>02</b>
-          <div>
-            <h3>Aufräumen</h3>
-            <p>Wir reduzieren Inhalte und Struktur auf das, was wirklich zählt.</p>
+        <li class="process-step">
+          <span class="process-number">02</span>
+          <div class="process-body">
+            <h3>Strukturieren</h3>
+            <p>Inhalte, Nutzerwege und Anforderungen werden reduziert, priorisiert und geordnet.</p>
           </div>
         </li>
-        <li>
-          <b>03</b>
-          <div>
-            <h3>Geil machen</h3>
-            <p>Design, UX und Kommunikation werden zu einem starken Auftritt.</p>
+        <li class="process-step">
+          <span class="process-number">03</span>
+          <div class="process-body">
+            <h3>Gestalten und testen</h3>
+            <p>Visuelle Richtung, Interface und Prototyp entstehen und werden früh überprüft.</p>
           </div>
         </li>
-        <li>
-          <b>04</b>
-          <div>
-            <h3>Raus damit</h3>
-            <p>Sauber umgesetzt, getestet und bereit für echte Kunden.</p>
+        <li class="process-step">
+          <span class="process-number">04</span>
+          <div class="process-body">
+            <h3>Umsetzen und veröffentlichen</h3>
+            <p>Die Website wird responsiv umgesetzt, getestet, veröffentlicht und sauber übergeben.</p>
           </div>
         </li>
       </ol>
     </section>
 
-    <section class="team reveal">
-      <div class="team-title">
-        <p class="section-no">04 / TEAM</p>
-        <h2 class="display display-solid">
-          DREI KÖPFE.<br>
-          ZWEI STÄDTE.<br>
-          <span class="brush-mark brush-4">NULL AUSREDEN.</span>
-        </h2>
-      </div>
-
-      <div class="team-grid">
-        <article>
-          <span>PSY</span>
-          <h3>Psychologie</h3>
-          <p>Verstehen, wie Menschen denken, fühlen und entscheiden.</p>
-        </article>
-
-        <article>
-          <span>UX</span>
-          <h3>UX/UI-Forschung</h3>
-          <p>Beobachten, testen und aus Annahmen bessere Entscheidungen machen.</p>
-        </article>
-
-        <article>
-          <span>GD</span>
-          <h3>Grafikdesign</h3>
-          <p>Form, Farbe und Typografie so einsetzen, dass etwas hängen bleibt.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="kontakt" class="contact reveal">
-      <div>
-        <p class="section-no">05 / KONTAKT</p>
-        <h2 class="display display-solid">
-          GENUG<br>
-          GESCHAUT.
-        </h2>
-        <h2 class="display display-outline">
-          MACHEN WIR’S <span class="brush-mark brush-5">GEIL.</span>
-        </h2>
-        <p>
-          Schreib uns, was bei dir gerade scheiße aussieht.
-          Wir sagen ehrlich, was du brauchst und was nicht.
+    <!-- ================================================================
+         WAS WÄRE WENN …
+         ================================================================ -->
+    <section id="was-waere-wenn" class="showcase reveal">
+      <div class="showcase-intro">
+        <p class="eyebrow">Gestalterische Nebenquests</p>
+        <h2 class="showcase-headline">WAS WÄRE, WENN WIR ETWAS GANZ ANDERES WÄREN?</h2>
+        <p class="showcase-text">
+          Vier erfundene Unternehmen. Vier komplett unterschiedliche
+          Markenwelten. Nicht unser Geschäft — aber unser Design.
         </p>
       </div>
 
-      <form id="contactForm">
+      <div class="showcase-stage">
+        <div id="showcaseNav" class="showcase-nav" role="tablist" aria-label="Gestalterische Nebenquests">
+          <!-- wird aus content.js (showcaseWorlds) gerendert -->
+        </div>
+
+        <div id="showcasePreview" class="showcase-preview" aria-live="polite">
+          <!-- wird aus content.js (showcaseWorlds) gerendert -->
+        </div>
+      </div>
+
+      <div id="showcaseMobileList" class="showcase-mobile-list">
+        <!-- Mobile-Fallback: alle vier Welten gestapelt, wird gerendert -->
+      </div>
+    </section>
+
+    <!-- ================================================================
+         KONTAKT
+         ================================================================ -->
+    <section id="kontakt" class="contact reveal">
+      <div class="contact-intro">
+        <p class="section-label">Kontakt</p>
+        <h2 class="contact-headline">
+          GENUG GESCHAUT.<br>
+          WAS SOLL BEI DIR BESSER WERDEN?
+        </h2>
+        <p class="contact-text">
+          Erzähl uns, worum es geht. Wir sagen ehrlich, was sinnvoll ist, was
+          nicht und wie wir das Projekt angehen würden.
+        </p>
+
+        <ul class="contact-meta">
+          <li>Antwort normalerweise innerhalb von zwei Werktagen</li>
+          <li>Berlin, Wien und remote</li>
+          <li>Alternativ direkt per Mail: <a href="mailto:hello@dasgeil.studio">hello@dasgeil.studio</a></li>
+        </ul>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <!--
+          KONFIGURATION KONTAKTFORMULAR
+          Dienst: Web3Forms (https://web3forms.com), kein Backend nötig.
+          1. Auf web3forms.com die Ziel-Mailadresse eintragen -> Access Key
+             wird sofort per Mail zugeschickt (kein Account/Login nötig).
+          2. Den Wert unten bei "access_key" eintragen.
+          Solange hier der Platzhalter steht, läuft das Formular bewusst im
+          Entwicklungsmodus: es validiert normal, zeigt aber keine
+          Erfolgsmeldung vor, siehe script.js -> handleContactSubmit().
+        -->
         <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
-        <input type="hidden" name="subject" value="Neue Anfrage über dasgeil.de">
+        <input type="hidden" name="subject" value="Neue Projektanfrage über dasgeil.de">
         <input type="checkbox" name="botcheck" class="botcheck" aria-hidden="true" tabindex="-1" autocomplete="off">
 
-        <label>
-          Name
-          <input required name="name" placeholder="Wie heißt du?">
+        <div class="form-row">
+          <label for="fieldName">
+            Name <span aria-hidden="true">*</span>
+            <input id="fieldName" required name="name" autocomplete="name">
+          </label>
+
+          <label for="fieldEmail">
+            E-Mail <span aria-hidden="true">*</span>
+            <input id="fieldEmail" required type="email" name="email" autocomplete="email">
+          </label>
+        </div>
+
+        <label for="fieldCompany">
+          Unternehmen
+          <input id="fieldCompany" name="company" autocomplete="organization">
         </label>
 
-        <label>
-          E-Mail
-          <input required type="email" name="email" placeholder="wo@erreichen.wir.dich">
+        <label for="fieldMessage">
+          Projektbeschreibung <span aria-hidden="true">*</span>
+          <textarea id="fieldMessage" required name="message"></textarea>
         </label>
 
-        <label>
-          Projekt
-          <textarea required name="message" placeholder="Was soll geil werden?"></textarea>
-        </label>
+        <div class="form-row">
+          <label for="fieldBudget">
+            Budgetrahmen (optional)
+            <select id="fieldBudget" name="budget">
+              <option value="">Keine Angabe</option>
+              <option value="unter-5000">Unter 5.000 €</option>
+              <option value="5000-15000">5.000 – 15.000 €</option>
+              <option value="15000-40000">15.000 – 40.000 €</option>
+              <option value="ueber-40000">Über 40.000 €</option>
+            </select>
+          </label>
 
-        <button class="btn btn-primary" type="submit">Projekt anfragen ↗</button>
+          <label for="fieldStart">
+            Gewünschter Start (optional)
+            <input id="fieldStart" name="start" placeholder="z. B. Q1 2026">
+          </label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Projekt anfragen</button>
         <p id="formStatus" role="status"></p>
       </form>
     </section>
   </main>
 
-  <footer>
-    <a class="logo" href="#top">dasgeil</a>
-    <p>3 Personen · Berlin × Wien</p>
-    <p>Webdesign · UX/UI · Grafikdesign</p>
-    <a href="mailto:hello@dasgeil.studio">hello@dasgeil.studio</a>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <a class="logo" href="#top">dasgeil</a>
+      <p class="footer-tagline">Webdesign, UX und visuelle Identitäten aus Berlin und Wien.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="mailto:hello@dasgeil.studio">hello@dasgeil.studio</a>
+      <!-- Social-Links ergänzen, sobald vorhanden - siehe README "Footer-Links pflegen" -->
+      <span class="footer-link-placeholder">LinkedIn <span class="placeholder-tag">Link ergänzen</span></span>
+      <span class="footer-link-placeholder">Instagram <span class="placeholder-tag">Link ergänzen</span></span>
+      <span class="footer-link-placeholder">Impressum <span class="placeholder-tag">Seite ergänzen</span></span>
+      <span class="footer-link-placeholder">Datenschutz <span class="placeholder-tag">Seite ergänzen</span></span>
+    </nav>
+
+    <p class="footer-meta">Berlin × Wien · <span id="footerYear"></span></p>
   </footer>
 
+  <!-- ================================================================
+       WAS-WÄRE-WENN LADE-OVERLAY
+       ================================================================ -->
+  <div id="showcaseOverlay" class="showcase-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="showcaseOverlayWorld">
+    <p id="showcaseOverlayWorld" class="showcase-overlay-world"></p>
+    <p id="showcaseOverlayText" class="showcase-overlay-text"></p>
+
+    <div class="showcase-overlay-bar">
+      <div id="showcaseOverlayBarFill" class="showcase-overlay-bar-fill"></div>
+    </div>
+
+    <div id="showcaseOverlayFallback" class="showcase-overlay-fallback" hidden>
+      <p>Diese Nebenquest wird gerade gebaut.</p>
+      <button type="button" id="showcaseOverlayBack" class="btn btn-ghost-invert">Zurück zur Mainpage</button>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
