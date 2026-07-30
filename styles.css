@@ -1036,10 +1036,6 @@ ul, ol {
   border-bottom: 1px solid var(--line);
 }
 
-.principle-reverse {
-  margin-left: clamp(0px, 8vw, 100px);
-}
-
 .principle-index {
   font-size: 42px;
   font-weight: 900;
@@ -1838,15 +1834,9 @@ ul, ol {
     font-size: clamp(38px, 11vw, 56px);
   }
 
-  .principle,
-  .principle-reverse {
+  .principle {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-
-  .principle-reverse .principle-index {
-    order: 0;
-    text-align: left;
   }
 
   .team-list {
