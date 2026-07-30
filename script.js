@@ -49,9 +49,35 @@ for (const element of document.querySelectorAll("a, button")) {
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const submitButton = contactForm.querySelector("button[type=submit]");
 
-contactForm.addEventListener("submit", (event) => {
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  formStatus.textContent =
-    "Sieht nach einem guten Projekt aus. Das Formular ist im Prototyp noch nicht mit einem Maildienst verbunden.";
+
+  formStatus.classList.remove("error");
+  formStatus.textContent = "Wird gesendet …";
+  submitButton.disabled = true;
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      formStatus.textContent = "Angekommen. Wir melden uns.";
+      contactForm.reset();
+    } else {
+      throw new Error(result.message || "Senden fehlgeschlagen.");
+    }
+  } catch (error) {
+    formStatus.classList.add("error");
+    formStatus.textContent =
+      "Hat nicht geklappt. Schreib uns direkt an hello@dasgeil.studio.";
+  } finally {
+    submitButton.disabled = false;
+  }
 });
