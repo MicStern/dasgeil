@@ -21,8 +21,21 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
 
-    <a class="header-cta" href="#kontakt">Projekt starten ↗</a>
+    <div class="header-actions">
+      <div class="theme-switcher" role="group" aria-label="Design wechseln">
+        <button type="button" class="theme-btn active" data-theme="1" aria-label="Design 1">01</button>
+        <button type="button" class="theme-btn" data-theme="2" aria-label="Design 2">02</button>
+        <button type="button" class="theme-btn" data-theme="3" aria-label="Design 3">03</button>
+        <button type="button" class="theme-btn" data-theme="4" aria-label="Design 4">04</button>
+      </div>
+
+      <a class="header-cta" href="#kontakt">Projekt starten ↗</a>
+    </div>
   </header>
+
+  <div id="themeOverlay" class="theme-overlay" aria-hidden="true">
+    <p>Wir bauen für dich<br>mal eben um<span class="theme-overlay-dots">…</span></p>
+  </div>
 
   <main>
     <section class="hero">

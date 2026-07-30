@@ -1,3 +1,25 @@
+const themeButtons = document.querySelectorAll(".theme-btn");
+const themeOverlay = document.getElementById("themeOverlay");
+
+for (const button of themeButtons) {
+  button.addEventListener("click", () => {
+    const theme = button.dataset.theme;
+    if (button.classList.contains("active")) return;
+
+    themeOverlay.classList.add("visible");
+
+    setTimeout(() => {
+      document.documentElement.dataset.theme = theme;
+
+      for (const otherButton of themeButtons) {
+        otherButton.classList.toggle("active", otherButton === button);
+      }
+
+      themeOverlay.classList.remove("visible");
+    }, 700);
+  });
+}
+
 const toggles = document.querySelectorAll(".card-toggle");
 
 for (const button of toggles) {
