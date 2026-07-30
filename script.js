@@ -1,22 +1,46 @@
 const themeButtons = document.querySelectorAll(".theme-btn");
 const themeOverlay = document.getElementById("themeOverlay");
+const themeOverlayBarFill = document.getElementById("themeOverlayBarFill");
+
+function runJumpyProgress(fillElement) {
+  return new Promise((resolve) => {
+    let progress = 0;
+
+    const step = () => {
+      progress = Math.min(100, progress + 6 + Math.random() * 20);
+      fillElement.style.width = `${progress}%`;
+
+      if (progress < 100) {
+        setTimeout(step, 110 + Math.random() * 260);
+      } else {
+        setTimeout(resolve, 350);
+      }
+    };
+
+    setTimeout(step, 120 + Math.random() * 200);
+  });
+}
 
 for (const button of themeButtons) {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", async () => {
     const theme = button.dataset.theme;
     if (button.classList.contains("active")) return;
 
+    themeOverlayBarFill.style.transition = "none";
+    themeOverlayBarFill.style.width = "0%";
     themeOverlay.classList.add("visible");
+    void themeOverlayBarFill.offsetWidth;
+    themeOverlayBarFill.style.transition = "";
 
-    setTimeout(() => {
-      document.documentElement.dataset.theme = theme;
+    await runJumpyProgress(themeOverlayBarFill);
 
-      for (const otherButton of themeButtons) {
-        otherButton.classList.toggle("active", otherButton === button);
-      }
+    document.documentElement.dataset.theme = theme;
 
-      themeOverlay.classList.remove("visible");
-    }, 700);
+    for (const otherButton of themeButtons) {
+      otherButton.classList.toggle("active", otherButton === button);
+    }
+
+    themeOverlay.classList.remove("visible");
   });
 }
 
